@@ -37,7 +37,6 @@ class BranchModel extends CI_Model
         $this->name = $request->name;
         $this->address = $request->address;
         $this->phoneNumber = $request->phoneNumber;
-        $this->created_at = date('Y-m-d H:i:s');
         
         if($this->db->insert($this->table, $this)){
             return ['msg' => 'Berhasil', 'error' => false];
